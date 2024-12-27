@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:CityModel
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:core="http://www.opengis.net/citygml/3.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
+  xmlns:app="http://www.opengis.net/citygml/appearance/3.0"
+  xsi:schemaLocation="http://www.opengis.net/citygml/3.0 https://schemas.opengis.net/citygml/3.0/citygmlBase.xsd
+                      http://www.opengis.net/citygml/building/3.0 https://schemas.opengis.net/citygml/3.0/building.xsd
+                      http://www.opengis.net/citygml/appearance/3.0 https://schemas.opengis.net/citygml/3.0/appearance.xsd">
+  <gml:boundedBy>
+    <gml:Envelope srsDimension="3" srsName="EPSG:4979" >
+      <gml:lowerCorner>0 0 0</gml:lowerCorner>
+      <gml:upperCorner>5 10 6</gml:upperCorner>
+    </gml:Envelope>
+  </gml:boundedBy>
+  <!-- Building -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Building_1">
+      <gml:name>Simple Building</gml:name>
+      <bldg:class>Residential</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 0
+                        5 0 0
+                        5 10 0
+                        0 10 0
+                        0 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Roof_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 4
+                        2.5 0 6
+                        2.5 10 6
+                        0 10 4
+                        0 0 4
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+				</gml:Polygon>
+              </gml:surfaceMember> 
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Roof_2">
+     			  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        2.5 0 6
+                        2.5 10 6
+                        5 10 4
+                        5 0 4
+						2.5 0 6
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+			  <!-- Roof triangles -->
+			  <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Roof_Triangle_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 4
+                        5 0 4
+                        2.5 0 6
+                        0 0 4
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+			  <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Roof_Triangle_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 10 4
+                        5 10 4
+                        2.5 10 6
+                        0 10 4
+        			  </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 0
+                        5 0 0
+                        5 0 4
+                        0 0 4
+                        0 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        5 0 0
+                        5 10 0
+                        5 10 4
+                        5 0 4
+                        5 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        5 10 0
+                        0 10 0
+                        0 10 4
+                        5 10 4
+						5 10 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 10 0
+                        0 0 0
+                        0 0 4
+                        0 10 4
+                        0 10 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+  <!-- Appearance -->
+  <core:appearanceMember>
+    <app:Appearance gml:id="appearance1">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>1 1 0</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_Wall_1</app:target>
+          <app:target>#Building_Wall_2</app:target>
+          <app:target>#Building_Wall_3</app:target>
+          <app:target>#Building_Wall_4</app:target>
+          <app:target>#Building_Base</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+    <app:Appearance gml:id="appearance2">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>1 0 0</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_Roof_1</app:target>
+		  <app:target>#Building_Roof_2</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+	<app:Appearance gml:id="appearance3">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>1 0.5 0</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_Roof_Triangle_1</app:target>
+		  <app:target>#Building_Roof_Triangle_2</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+  </core:appearanceMember>
+</core:CityModel>

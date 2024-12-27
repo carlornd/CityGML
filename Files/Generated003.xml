@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:CityModel
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:core="http://www.opengis.net/citygml/3.0"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
+  xmlns:app="http://www.opengis.net/citygml/appearance/3.0"
+  xmlns:tran="http://www.opengis.net/citygml/transportation/3.0"
+  xsi:schemaLocation="http://www.opengis.net/citygml/3.0 https://schemas.opengis.net/citygml/3.0/citygmlBase.xsd
+                      http://www.opengis.net/citygml/building/3.0 https://schemas.opengis.net/citygml/3.0/building.xsd
+                      http://www.opengis.net/citygml/appearance/3.0 https://schemas.opengis.net/citygml/3.0/appearance.xsd
+                      http://www.opengis.net/citygml/transportation/3.0 https://schemas.opengis.net/citygml/3.0/transportation.xsd">
+  <gml:boundedBy>
+    <gml:Envelope srsDimension="3" srsName="EPSG:4979">
+      <gml:lowerCorner>0 0 0</gml:lowerCorner>
+      <gml:upperCorner>100 50 50</gml:upperCorner>
+    </gml:Envelope>
+  </gml:boundedBy>
+  
+  <!-- Avenue -->
+  <core:cityObjectMember>
+    <tran:Road gml:id="Avenue_1">
+      <gml:name>Main Avenue</gml:name>
+      <tran:class>Primary</tran:class>
+      <core:lod2MultiSurface>
+        <gml:MultiSurface>
+          <gml:surfaceMember>
+            <gml:Polygon gml:id="Avenue_Surface">
+              <gml:exterior>
+                <gml:LinearRing>
+                  <gml:posList>
+                    0 20 0
+                    100 20 0
+                    100 30 0
+                    0 30 0
+                    0 20 0
+                  </gml:posList>
+                </gml:LinearRing>
+              </gml:exterior>
+            </gml:Polygon>
+          </gml:surfaceMember>
+        </gml:MultiSurface>
+      </core:lod2MultiSurface>
+    </tran:Road>
+  </core:cityObjectMember>
+
+  <!-- Buildings along the Avenue -->
+  <!-- Building 1 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Building_1">
+      <gml:name>Building 1</gml:name>
+      <bldg:class>Commercial</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_1_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 0
+                        10 0 0
+                        10 20 0
+                        0 20 0
+                        0 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_1_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 30
+                        10 0 30
+                        10 20 30
+                        0 20 30
+                        0 0 30
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_1_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 0 0
+                        10 0 0
+                        10 0 30
+                        0 0 30
+                        0 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_1_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        10 0 0
+                        10 20 0
+                        10 20 30
+                        10 0 30
+                        10 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_1_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        10 20 0
+                        0 20 0
+                        0 20 30
+                        10 20 30
+                        10 20 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_1_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        0 20 0
+                        0 0 0
+                        0 0 30
+                        0 20 30
+                        0 20 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+  
+  <!-- Building 2 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Building_2">
+      <gml:name>Building 2</gml:name>
+      <bldg:class>Residential</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_2_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        90 0 0
+                        100 0 0
+                        100 20 0
+                        90 20 0
+                        90 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_2_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        90 0 40
+                        100 0 40
+                        100 20 40
+                        90 20 40
+                        90 0 40
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_2_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        90 0 0
+                        100 0 0
+                        100 0 40
+                        90 0 40
+                        90 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_2_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        100 0 0
+                        100 20 0
+                        100 20 40
+                        100 0 40
+                        100 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_2_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        100 20 0
+                        90 20 0
+                        90 20 40
+                        100 20 40
+                        100 20 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_2_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        90 20 0
+                        90 0 0
+                        90 0 40
+                        90 20 40
+                        90 20 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+
+  <!-- Square Plaza -->
+  <core:cityObjectMember>
+    <tran:Square gml:id="Square_Plaza">
+      <gml:name>Central Square</gml:name>
+      <core:lod2MultiSurface>
+        <gml:MultiSurface>
+          <gml:surfaceMember>
+            <gml:Polygon gml:id="Square_Plaza_Surface">
+              <gml:exterior>
+                <gml:LinearRing>
+                  <gml:posList>
+                    40 20 0
+                    60 20 0
+                    60 30 0
+                    40 30 0
+                    40 20 0
+                  </gml:posList>
+                </gml:LinearRing>
+              </gml:exterior>
+            </gml:Polygon>
+          </gml:surfaceMember>
+        </gml:MultiSurface>
+      </core:lod2MultiSurface>
+    </tran:Square>
+  </core:cityObjectMember>
+  
+  <!-- Buildings around the Square Plaza -->
+  <!-- Building 3 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Building_3">
+      <gml:name>Building 3</gml:name>
+      <bldg:class>Commercial</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_3_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 0 0
+                        50 0 0
+                        50 20 0
+                        40 20 0
+                        40 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_3_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 0 20
+                        50 0 20
+                        50 20 20
+                        40 20 20
+                        40 0 20
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_3_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 0 0
+                        50 0 0
+                        50 0 20
+                        40 0 20
+                        40 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_3_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 0 0
+                        50 20 0
+                        50 20 20
+                        50 0 20
+                        50 0 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_3_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 20 0
+                        40 20 0
+                        40 20 20
+                        50 20 20
+                        50 20 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_3_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 20 0
+                        40 0 0
+                        40 0 20
+                        40 20 20
+                        40 20 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+  
+  <!-- Building 4 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Building_4">
+      <gml:name>Building 4</gml:name>
+      <bldg:class>Residential</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_4_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 30 0
+                        60 30 0
+                        60 50 0
+                        50 50 0
+                        50 30 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_4_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 30 30
+                        60 30 30
+                        60 50 30
+                        50 50 30
+                        50 30 30
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_4_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 30 0
+                        60 30 0
+                        60 30 30
+                        50 30 30
+                        50 30 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_4_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        60 30 0
+                        60 50 0
+                        60 50 30
+                        60 30 30
+                        60 30 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_4_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        60 50 0
+                        50 50 0
+                        50 50 30
+                        60 50 30
+                        60 50 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_4_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 50 0
+                        50 30 0
+                        50 30 30
+                        50 50 30
+                        50 50 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+
+  <!-- Building 5 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Building_5">
+      <gml:name>Building 5</gml:name>
+      <bldg:class>Commercial</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_5_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 30 0
+                        50 30 0
+                        50 50 0
+                        40 50 0
+                        40 30 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_5_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 30 20
+                        50 30 20
+                        50 50 20
+                        40 50 20
+                        40 30 20
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_5_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 30 0
+                        50 30 0
+                        50 30 20
+                        40 30 20
+                        40 30 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_5_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 30 0
+                        50 50 0
+                        50 50 20
+                        50 30 20
+                        50 30 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_5_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        50 50 0
+                        40 50 0
+                        40 50 20
+                        50 50 20
+                        50 50 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Building_5_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList>
+                        40 50 0
+                        40 30 0
+                        40 30 20
+                        40 50 20
+                        40 50 0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+
+  <!-- Appearance Definitions -->
+  <core:appearanceMember>
+    <app:Appearance gml:id="appearance1">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>0.8 0.8 0.8</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Avenue_Surface</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+    <app:Appearance gml:id="appearance2">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>0.5 0.5 0.5</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_1_Base</app:target>
+          <app:target>#Building_1_Roof</app:target>
+          <app:target>#Building_1_Wall_1</app:target>
+          <app:target>#Building_1_Wall_2</app:target>
+          <app:target>#Building_1_Wall_3</app:target>
+          <app:target>#Building_1_Wall_4</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+    <app:Appearance gml:id="appearance3">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>0.7 0.7 0.7</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_2_Base</app:target>
+          <app:target>#Building_2_Roof</app:target>
+          <app:target>#Building_2_Wall_1</app:target>
+          <app:target>#Building_2_Wall_2</app:target>
+          <app:target>#Building_2_Wall_3</app:target>
+          <app:target>#Building_2_Wall_4</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+    <app:Appearance gml:id="appearance4">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>0.6 0.6 0.6</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_3_Base</app:target>
+          <app:target>#Building_3_Roof</app:target>
+          <app:target>#Building_3_Wall_1</app:target>
+          <app:target>#Building_3_Wall_2</app:target>
+          <app:target>#Building_3_Wall_3</app:target>
+          <app:target>#Building_3_Wall_4</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+    <app:Appearance gml:id="appearance5">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>0.9 0.9 0.9</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_4_Base</app:target>
+          <app:target>#Building_4_Roof</app:target>
+          <app:target>#Building_4_Wall_1</app:target>
+          <app:target>#Building_4_Wall_2</app:target>
+          <app:target>#Building_4_Wall_3</app:target>
+          <app:target>#Building_4_Wall_4</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+    <app:Appearance gml:id="appearance6">
+      <app:surfaceData>
+        <app:X3DMaterial>
+          <app:ambientIntensity>0.2</app:ambientIntensity>
+          <app:diffuseColor>0.4 0.4 0.4</app:diffuseColor>
+          <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+          <app:specularColor>1.0 1.0 1.0</app:specularColor>
+          <app:shininess>0.2</app:shininess>
+          <app:transparency>0.0</app:transparency>
+          <app:isSmooth>false</app:isSmooth>
+          <app:target>#Building_5_Base</app:target>
+          <app:target>#Building_5_Roof</app:target>
+          <app:target>#Building_5_Wall_1</app:target>
+          <app:target>#Building_5_Wall_2</app:target>
+          <app:target>#Building_5_Wall_3</app:target>
+          <app:target>#Building_5_Wall_4</app:target>
+        </app:X3DMaterial>
+      </app:surfaceData>
+    </app:Appearance>
+  </core:appearanceMember>
+</core:CityModel>
