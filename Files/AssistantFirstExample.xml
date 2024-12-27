@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:CityModel 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:con="http://www.opengis.net/citygml/construction/3.0"
+  xmlns:core="http://www.opengis.net/citygml/3.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:bldg="http://www.opengis.net/citygml/building/3.0"
+  xmlns:app="http://www.opengis.net/citygml/appearance/3.0"
+  xmlns:pcl="http://www.opengis.net/citygml/pointcloud/3.0"
+  xmlns:gen="http://www.opengis.net/citygml/generics/3.0" xmlns:xAL="urn:oasis:names:tc:ciq:xal:3"
+  xsi:schemaLocation="http://www.opengis.net/citygml/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/core.xsd 
+  http://www.opengis.net/citygml/appearance/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/appearance.xsd 
+  http://www.opengis.net/citygml/bridge/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/bridge.xsd 
+  http://www.opengis.net/citygml/building/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/building.xsd
+  http://www.opengis.net/citygml/cityfurniture/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/cityFurniture.xsd
+  http://www.opengis.net/citygml/cityobjectgroup/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/cityObjectGroup.xsd
+  http://www.opengis.net/citygml/generics/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/generics.xsd 
+  http://www.opengis.net/citygml/landuse/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/landUse.xsd 
+  http://www.opengis.net/citygml/relief/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/relief.xsd 
+  http://www.opengis.net/citygml/transportation/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/transportation.xsd
+  http://www.opengis.net/citygml/tunnel/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/tunnel.xsd
+  http://www.opengis.net/citygml/pointcloud/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/pointCloud.xsd 
+  http://www.opengis.net/citygml/vegetation/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/vegetation.xsd 
+  http://www.opengis.net/citygml/waterbody/3.0 https://sdm-web.cloud.iai.kit.edu/CityGML-3-0/Schema/waterBody.xsd" >
+  <gml:name>Test CR 3</gml:name>
+  <gml:boundedBy>
+    <gml:Envelope srsDimension="3" srsName="EPSG:4979">
+      <gml:lowerCorner>0.0 0.0 0.0</gml:lowerCorner>
+      <gml:upperCorner>50.0 10.0 80.0</gml:upperCorner>
+    </gml:Envelope>
+  </gml:boundedBy>
+  <!-- Tower 1 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Tower_1">
+      <gml:name>Left Tower</gml:name>
+      <bldg:class>Residential</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_1_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        0.0 0.0 0.0
+                        10.0 0.0 0.0
+                        10.0 10.0 0.0
+                        0.0 10.0 0.0
+                        0.0 0.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_1_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        0.0 0.0 80.0
+                        10.0 0.0 80.0
+                        10.0 10.0 80.0
+                        0.0 10.0 80.0
+                        0.0 0.0 80.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_1_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        0.0 0.0 0.0
+                        10.0 0.0 0.0
+                        10.0 0.0 80.0
+                        0.0 0.0 80.0
+                        0.0 0.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_1_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        10.0 0.0 0.0
+                        10.0 10.0 0.0
+                        10.0 10.0 80.0
+                        10.0 0.0 80.0
+                        10.0 0.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_1_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        10.0 10.0 0.0
+                        0.0 10.0 0.0
+                        0.0 10.0 80.0
+                        10.0 10.0 80.0
+                        10.0 10.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_1_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        0.0 10.0 0.0
+                        0.0 0.0 0.0
+                        0.0 0.0 80.0
+                        0.0 10.0 80.0
+                        0.0 10.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+  <!-- Tower 2 -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Tower_2">
+      <gml:name>Right Tower</gml:name>
+      <bldg:class>Residential</bldg:class>
+      <core:lod2Solid>
+        <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_2_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        30.0 0.0 0.0
+                        40.0 0.0 0.0
+                        40.0 10.0 0.0
+                        30.0 10.0 0.0
+                        30.0 0.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_2_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        30.0 0.0 80.0
+                        40.0 0.0 80.0
+                        40.0 10.0 80.0
+                        30.0 10.0 80.0
+                        30.0 0.0 80.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_2_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        30.0 0.0 0.0
+                        40.0 0.0 0.0
+                        40.0 0.0 80.0
+                        30.0 0.0 80.0
+                        30.0 0.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_2_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        40.0 0.0 0.0
+                        40.0 10.0 0.0
+                        40.0 10.0 80.0
+                        40.0 0.0 80.0
+                        40.0 0.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_2_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        40.0 10.0 0.0
+                        30.0 10.0 0.0
+                        30.0 10.0 80.0
+                        40.0 10.0 80.0
+                        40.0 10.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Tower_2_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        30.0 10.0 0.0
+                        30.0 0.0 0.0
+                        30.0 0.0 80.0
+                        30.0 10.0 80.0
+                        30.0 10.0 0.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+      </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+  <!-- Bridge -->
+  <core:cityObjectMember>
+    <bldg:Building gml:id="Bridge_1">
+      <gml:name>Connecting Bridge</gml:name>
+      <bldg:class>Infrastructure</bldg:class>
+      <core:lod2Solid>
+       <gml:Solid>
+          <gml:exterior>
+            <gml:CompositeSurface>
+              <!-- Bridge Ground Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Bridge_1_Base">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        10.0 0.0 50.0
+                        30.0 0.0 50.0
+                        30.0 10.0 50.0
+                        10.0 10.0 50.0
+                        10.0 0.0 50.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Bridge Roof Surface -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Bridge_1_Roof">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        10.0 0.0 55.0
+                        30.0 0.0 55.0
+                        30.0 10.0 55.0
+                        10.0 10.0 55.0
+                        10.0 0.0 55.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <!-- Walls -->
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Bridge_1_Wall_1">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        10.0 0.0 50.0
+                        30.0 0.0 50.0
+                        30.0 0.0 55.0
+                        10.0 0.0 55.0
+                        10.0 0.0 50.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Bridge_1_Wall_2">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        30.0 0.0 50.0
+                        30.0 10.0 50.0
+                        30.0 10.0 55.0
+                        30.0 0.0 55.0
+                        30.0 0.0 50.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Bridge_1_Wall_3">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        30.0 10.0 50.0
+                        10.0 10.0 50.0
+                        10.0 10.0 55.0
+                        30.0 10.0 55.0
+                        30.0 10.0 50.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+              <gml:surfaceMember>
+                <gml:Polygon gml:id="Bridge_1_Wall_4">
+                  <gml:exterior>
+                    <gml:LinearRing>
+                      <gml:posList srsDimension="3">
+                        10.0 10.0 50.0
+                        10.0 0.0 50.0
+                        10.0 0.0 55.0
+                        10.0 10.0 55.0
+                        10.0 10.0 50.0
+                      </gml:posList>
+                    </gml:LinearRing>
+                  </gml:exterior>
+                </gml:Polygon>
+              </gml:surfaceMember>
+            </gml:CompositeSurface>
+          </gml:exterior>
+        </gml:Solid>
+	  </core:lod2Solid>
+    </bldg:Building>
+  </core:cityObjectMember>
+<!-- Appearance Definition -->
+<core:appearanceMember>
+    <app:Appearance gml:id="appearance1">
+	<app:surfaceData>
+            <app:X3DMaterial>
+                <app:ambientIntensity>0.2</app:ambientIntensity>
+                    <app:diffuseColor>0 0 1</app:diffuseColor>
+                    <app:emissiveColor>0.0 0.0 0.0</app:emissiveColor>
+                    <app:specularColor>1.0 1.0 1.0</app:specularColor>
+                    <app:shininess>0.2</app:shininess>
+                    <app:transparency>0.0</app:transparency>
+                    <app:isSmooth>false</app:isSmooth>
+                    <app:target>#Bridge_1_Base</app:target>
+		   <app:target>#Bridge_1_Roof</app:target>
+		   <app:target>#Bridge_1_Wall_1</app:target>
+		   <app:target>#Bridge_1_Wall_2</app:target>
+		   <app:target>#Bridge_1_Wall_3</app:target>
+		   <app:target>#Bridge_1_Wall_4</app:target>
+            </app:X3DMaterial>
+        </app:surfaceData>
+    </app:Appearance>
+  </core:appearanceMember>
+</core:CityModel>
